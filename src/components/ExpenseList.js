@@ -5,7 +5,7 @@ import selectExpenses from './../selectors/expenses.js';
 
 const ExpenseList = (props) => (
     <div>
-        <h1>This is from the ExpenseList</h1>
+        {props.expenses.length > 0 ? <h1>Your Expenses</h1> : <h1>No Expenses</h1>}
         {props.expenses.map((expense) => {
             return <ExpenseListItem key={expense.id} {...expense}/>
         })}
