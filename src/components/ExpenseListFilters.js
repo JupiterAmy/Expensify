@@ -20,13 +20,16 @@ class ExpenseListFilters extends React.Component {
   render() {
     return (
       <div>
+        <label>Find:</label>
         <input
           type="text"
+          placeholder="searchtext"
           value={this.props.filters.text}
           onChange={(e) => {
             this.props.dispatch(setTextFilter(e.target.value));
           }}
         />
+        <label>Sort By: </label>
         <select
           value={this.props.filters.sortBy}
           onChange={(e) => {
@@ -40,6 +43,7 @@ class ExpenseListFilters extends React.Component {
           <option value="date">Date</option>
           <option value="amount">Amount</option>
         </select>
+        <label>Select Range: </label>
         <DateRangePicker
           startDate={this.props.filters.startDate}
           startDateId={uuid()}
