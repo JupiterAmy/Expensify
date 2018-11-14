@@ -7,9 +7,9 @@ import configureStore from './store/configureStore';
 import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import './firebase/firebase';
 
 
-console.log('connected');
 const store = configureStore();
 
 const jsx = (
